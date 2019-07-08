@@ -1,5 +1,7 @@
 # create-cordova-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/busterc/create-cordova-app.svg)](https://greenkeeper.io/)
+
 > Create Cordova apps via prompts for adding platforms and plugins
 
 ## Installation
