@@ -1,0 +1,84 @@
+{
+  "name": "create-cordova-app",
+  "description": "Create Cordova apps via prompts for adding platforms and plugins",
+  "license": "ISC",
+  "author": "Buster Collings <busterc@gmail.com>",
+  "repository": "busterc/create-cordova-app",
+  "version": "0.0.0",
+  "bin": "lib/cli.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prepare": "lec lib/cli.js -c LF",
+    "pretest": "eslint lib && rm -rf lib/__tests__/myapp",
+    "test": "jest --coverage --runInBand --silent"
+  },
+  "dependencies": {
+    "execa": "^2.0.3",
+    "meow": "^5.0.0",
+    "p-each-series": "^2.1.0",
+    "prompts": "^2.1.0"
+  },
+  "peerDependencies": {
+    "cordova": "*"
+  },
+  "devDependencies": {
+    "cordova": "^9.0.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-xo": "^0.26.0",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "lec": "^1.0.1",
+    "lint-staged": "^9.1.0",
+    "prettier": "^1.15.2",
+    "prettier-package-json": "^2.1.0"
+  },
+  "keywords": [
+    "cordova",
+    "cordova:tool",
+    "ecosystem:cordova",
+    "phonegap"
+  ],
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier",
+      "json"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ],
+    "package.json": [
+      "prettier-package-json --write",
+      "git add"
+    ]
+  }
+}
