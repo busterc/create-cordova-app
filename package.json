@@ -15,7 +15,7 @@
     "test": "jest --coverage --runInBand --silent"
   },
   "dependencies": {
-    "execa": "^2.0.3",
+    "execa": "^3.2.0",
     "meow": "^5.0.0",
     "p-each-series": "^2.1.0",
     "prompts": "^2.1.0"
