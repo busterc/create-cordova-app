@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "execa": "^2.0.3",
-    "meow": "^5.0.0",
+    "meow": "^6.0.0",
     "p-each-series": "^2.1.0",
     "prompts": "^2.1.0"
   },
